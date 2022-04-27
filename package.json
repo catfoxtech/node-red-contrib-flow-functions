@@ -1,0 +1,15 @@
+{
+  "name": "@catfoxtech/node-red-contrib-flow-functions",
+  "version": "0.0.0",
+  "main": "flow-functions.js",
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "version": ">=2.2.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "node-red": "^2.2.2"
+  }
+}

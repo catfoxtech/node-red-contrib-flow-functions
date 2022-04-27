@@ -1,0 +1,4 @@
+**/node_modules/
+
+**/node-red/*
+!**/node-red/flows.json

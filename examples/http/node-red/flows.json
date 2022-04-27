@@ -1,0 +1,103 @@
+[
+    {
+        "id": "95ced6d0bf350548",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c5e0e7b4c55ff5c9",
+        "type": "gcp-cloud-functions-http-in",
+        "z": "95ced6d0bf350548",
+        "name": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "3875c980f0f7323a",
+                "884312e529b0378c"
+            ]
+        ]
+    },
+    {
+        "id": "884312e529b0378c",
+        "type": "delay",
+        "z": "95ced6d0bf350548",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "fb9ee71aad296f89"
+            ]
+        ]
+    },
+    {
+        "id": "fb9ee71aad296f89",
+        "type": "change",
+        "z": "95ced6d0bf350548",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [
+                "3ca2e8be9198a5e0"
+            ]
+        ]
+    },
+    {
+        "id": "3ca2e8be9198a5e0",
+        "type": "http response",
+        "z": "95ced6d0bf350548",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3875c980f0f7323a",
+        "type": "debug",
+        "z": "95ced6d0bf350548",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 140,
+        "wires": []
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "id": "46707412e189072d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c5e82026f9861d9",
+        "type": "gcp-cloud-functions-bucket-in",
+        "z": "46707412e189072d",
+        "name": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "ba3810f08b2eb06f",
+                "10289258aa6d628e"
+            ]
+        ]
+    },
+    {
+        "id": "ba3810f08b2eb06f",
+        "type": "delay",
+        "z": "46707412e189072d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "20eb04c6f44e3bed"
+            ]
+        ]
+    },
+    {
+        "id": "20eb04c6f44e3bed",
+        "type": "gcp-cloud-functions-bucket-out",
+        "z": "46707412e189072d",
+        "name": "",
+        "x": 480,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "10289258aa6d628e",
+        "type": "debug",
+        "z": "46707412e189072d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 140,
+        "wires": []
+    }
+]

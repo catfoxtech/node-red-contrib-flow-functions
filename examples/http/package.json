@@ -1,0 +1,25 @@
+{
+  "name": "@catfoxtech/node-red-contrib-flow-functions-examples-http",
+  "version": "0.0.0",
+  "main": "index.js",
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "version": ">=2.2.2"
+  },
+  "dependencies": {
+    "@catfoxtech/node-red-contrib-flow-functions": "file:../..",
+    "@catfoxtech/node-red-contrib-google-cloud-functions": "github:catfoxtech/node-red-contrib-google-cloud-functions"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^3.0.0"
+  },
+  "scripts": {
+    "start": "npx functions-framework --signature-type=http",
+    "test": "time curl http://localhost:8080/ --verbose --header 'Content-Type: application/json' --data @data.json",
+    "gcloudignore": "gcloud meta list-files-for-upload",
+    "deploy": "gcloud functions deploy flow-functions-examples-http --no-allow-unauthenticated --runtime nodejs16 --trigger-http",
+    "call": "gcloud functions call flow-functions-examples-http --data='{\"data\": \"Hello, Red!\"}'"
+  }
+}

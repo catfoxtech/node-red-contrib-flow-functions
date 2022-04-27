@@ -1,0 +1,7 @@
+**/node_modules/
+
+/node-red/*
+!/node-red/flows.json
+
+/.gcloudignore
+/data.json
