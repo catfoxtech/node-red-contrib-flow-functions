@@ -9,8 +9,7 @@
     "version": ">=2.2.2"
   },
   "dependencies": {
-    "@catfoxtech/node-red-contrib-flow-functions": "file:../..",
-    "@catfoxtech/node-red-contrib-google-cloud-functions": "github:catfoxtech/node-red-contrib-google-cloud-functions"
+    "@catfoxtech/node-red-contrib-flow-functions": "file:../.."
   },
   "devDependencies": {
     "@google-cloud/functions-framework": "^3.0.0"

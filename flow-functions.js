@@ -1,8 +1,7 @@
 const headless = process.env.NODE_ENV === 'production';
 
 const path = require('path');
-const nodesDir = path.resolve('./node_modules');
-const userDir = path.resolve('./node-red');
+const userDir = path.resolve('node-red');
 
 const embedded = {
     SKIP_BUILD_CHECK: headless,
@@ -38,11 +37,9 @@ const embedded = {
             // level: 'trace'
         }
     },
-    nodesDir,
     readOnly: headless,
     // uiHost: undefined,
     uiPort: process.env.NODE_RED_UI_PORT || 1880,
-    // safeMode: false, // observed race condition in production potentially caused by `safeMode`
     userDir
 };
 

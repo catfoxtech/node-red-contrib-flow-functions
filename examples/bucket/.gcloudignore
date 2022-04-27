@@ -2,6 +2,7 @@
 
 /node-red/*
 !/node-red/flows.json
+!/node-red/node_modules/**
 
 /.gcloudignore
 /data.json

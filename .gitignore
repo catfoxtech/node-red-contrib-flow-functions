@@ -2,3 +2,4 @@
 
 **/node-red/*
 !**/node-red/flows.json
+!**/node-red/package*.json
