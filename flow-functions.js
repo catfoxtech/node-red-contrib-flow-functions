@@ -125,8 +125,9 @@ async function send(msg, flow, flows) {
     const node = _.find(flows, flow);
     if (node) {
         if (node.type === 'tab') { // find first cloud function input node in flow
+            const tabId = node.id;
             return send(msg, function (node) {
-                return node.z === node.id && /^gcp-cloud-functions-(http|bucket|topic)-in$/.test(node.type);
+                return node.z === tabId && /^gcp-cloud-functions-(http|bucket|topic)-in$/.test(node.type);
             }, flows);
         } else {
             return RED.nodes.getNode(node.id).receive(msg);
