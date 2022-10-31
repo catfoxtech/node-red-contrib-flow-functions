@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "node-red": "^2.2.2"
+    "node-red": "^3.0.2"
   }
 }
